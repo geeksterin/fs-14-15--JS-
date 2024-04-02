@@ -3,14 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 // combination of action and reducer (generate)
 
 const initialState = {
-  movie: [
-    {
-      id: 1,
-      name: "marvel",
-      type: "action",
-      rating: "5",
-    },
-  ],
+  movie: [],
+  topRated: [],
 };
 
 const movieSlice = createSlice({
@@ -20,13 +14,14 @@ const movieSlice = createSlice({
     setMovie: (state, action) => {
       state.movie = action.payload;
     },
+    setTopRated: (state, action) => {
+      state.topRated = action.payload;
+    },
   },
 });
 
-console.log(movieSlice);
-
 // createSlice - > actions , reducer
 
-export const { setMovie } = movieSlice.actions;
+export const { setMovie, setTopRated } = movieSlice.actions;
 
 export default movieSlice.reducer;
