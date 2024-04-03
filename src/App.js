@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Movie from "./pages/Movie";
 import { TvShow } from "./pages/TvShow";
 import MovieDetails from "./pages/MovieDetails";
+import Search from "./pages/Search";
 
 const routes = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const routes = createBrowserRouter([
   {
     path: "/movie/:id",
     Component: MovieDetails,
+  },
+  {
+    path: "/search/:movie",
+    Component: Search,
   },
 ]);
 

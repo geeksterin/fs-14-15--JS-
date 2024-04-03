@@ -5,6 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   movie: [],
   topRated: [],
+  searchMovie: [],
 };
 
 const movieSlice = createSlice({
@@ -17,11 +18,14 @@ const movieSlice = createSlice({
     setTopRated: (state, action) => {
       state.topRated = action.payload;
     },
+    setSearchMovie: (state, action) => {
+      state.searchMovie = action.payload;
+    },
   },
 });
 
 // createSlice - > actions , reducer
 
-export const { setMovie, setTopRated } = movieSlice.actions;
+export const { setMovie, setTopRated, setSearchMovie } = movieSlice.actions;
 
 export default movieSlice.reducer;
