@@ -7,7 +7,7 @@ export const Card = ({ movie }) => {
         <img
           className="rounded"
           src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-          alt="image"
+          alt="photoImage"
         />
         <p>{movie.original_title}</p>
       </div>
